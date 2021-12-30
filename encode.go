@@ -901,7 +901,7 @@ func (me mapEncoder) encode(e *encodeState, v reflect.Value, opts *EncOpts) {
 			e.error(fmt.Errorf("json: encoding error for type %q: %q", v.Type().String(), err.Error()))
 		}
 	}
-	sort.Slice(sv, func(i, j int) bool { return sv[i].s < sv[j].s })
+	//sort.Slice(sv, func(i, j int) bool { return sv[i].s < sv[j].s })
 
 	for i, kv := range sv {
 		if i > 0 {
